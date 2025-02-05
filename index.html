@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg" href="./assets/img/giftbox-elegido.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./recursos/css/styles.css" />
+    <title></title>
+  </head>
+  <body>
+    <main class="main-content">
+      <div class="content">
+        <section class="section-image">
+          <h1 class="title"></h1>
+          <img
+            src="./recursos/img/secret-friend.svg"
+            alt="Imagen representativa de amigo secreto"
+          />
+        </section>
+
+        <section class="input-section">
+          <h2 class="section-title">¡Agrega a tus amigos!</h2>
+
+          <div class="input-wrapper">
+            <input
+              id="amigo"
+              type="text"
+              class="input-name"
+              placeholder="Escribe un nombre"
+            />
+            <button class="button button-add" onclick="agregarAmigo()">
+              Añadir
+            </button>
+            <button class="button button-reset" onclick="reset()">
+              Resetear
+            </button>
+          </div>
+
+          <ul
+            id="listaAmigos"
+            class="name-list"
+            aria-labelledby="listaAmigos"
+            role="list"
+          >
+            <!-- <li class="elegible">Amigo</li>
+            <li class="elegido">Amiga</li> -->
+          </ul>
+
+          <ul id="resultado" class="result-list" aria-live="polite">
+            <!-- <li>El amigo secreto sorteado es: <span>Ganador</span></li> -->
+          </ul>
+
+          <div class="button-container">
+            <button
+              class="button-draw"
+              onclick="sortearAmigo()"
+              aria-label="Sortear amigo secreto"
+              disabled
+            >
+              <img
+                src="./recursos/img/play_circle_outline.png"
+                alt="Ícono para sortear"
+              />
+              Sortear amigo
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./recursos/js/app.js"></script>
+  </body>
+</html>
